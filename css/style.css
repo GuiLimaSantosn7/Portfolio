@@ -52,3 +52,96 @@ nav a {
     text-decoration: none;
     color: rgb(231, 185, 124);
 }
+
+/*coluna de 5*/
+.cont5 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            width: 80%;
+            margin: 0 auto; /* Centraliza o contêiner */
+        }
+        .col5 {
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+        }
+        .col5 img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+            object-fit: contain; /* Ajusta a imagem para caber dentro do contêiner sem cortá-la */
+        }
+
+/*expandir*/
+.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: 90%;
+    max-height: 90%;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: none;
+}
+.overlay.active {
+    display: block;
+}
+
+/*controles*/
+.controls {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 100%;
+    max-width: 1000px;
+    z-index: 1001;
+}
+.controls.active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.controls button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.controls button:focus {
+    outline: none;
+}
+.controls #closeBtn {
+    position: absolute;
+    top: -360px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.controls #prevBtn {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.controls #nextBtn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
