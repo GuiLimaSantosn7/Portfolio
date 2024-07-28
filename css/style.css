@@ -1,0 +1,54 @@
+@font-face {
+    font-family: caviar;
+    src: url(CaviarDreams_Bold.ttf);
+}
+
+.col1 {
+    position: absolute;
+    align-content: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.poster {
+    transition: filter 0.5s ease, transform 0.5s ease;
+    filter: blur(10px);
+    align-content: center;
+    text-align: center;
+    width: 26%;
+    margin-top: -4%;
+}
+
+.poster:hover{
+    filter: blur(0);
+    transform: scale(1.1);
+}
+
+
+nav {
+    text-align: center;
+    color: rgb(231, 185, 124);
+    padding: 50px;
+    font-family: caviar;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 80%;
+}
+
+.col4 {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(231, 185, 124);
+}
