@@ -67,8 +67,12 @@ nav a {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             cursor: pointer;
+            max-width: 100%; 
         }
         .col5 img {
+         max-width: 100%; /* Garante que as imagens não excedam o contêiner */
+    max-height: 100%; /* Garante que as imagens não excedam o contêiner */
+    object-fit: contain; /
             width: 100%;
             height: auto;
             transition: transform 0.5s ease;
@@ -81,7 +85,6 @@ nav a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;
     max-width: 90%;
     max-height: 90%;
     z-index: 1000;
