@@ -67,8 +67,12 @@ nav a {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             cursor: pointer;
+            max-width: 100%; 
         }
         .col5 img {
+         max-width: 100%; /* Garante que as imagens não excedam o contêiner */
+         max-height: 100%; /* Garante que as imagens não excedam o contêiner */
+         object-fit: contain;
             width: 100%;
             height: auto;
             transition: transform 0.5s ease;
@@ -81,7 +85,6 @@ nav a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;
     max-width: 90%;
     max-height: 90%;
     z-index: 1000;
@@ -102,6 +105,12 @@ nav a {
 }
 
 /*controles*/
+
+#prevBtn, #nextBtn, #closeBtn {
+    filter: invert(1);
+}
+
+
 .controls {
     position: fixed;
     top: 50%;
@@ -118,7 +127,7 @@ nav a {
     align-items: center;
 }
 .controls button {
-    background-color: #ffffff;
+    background: none;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -144,4 +153,35 @@ nav a {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+
+/* Estilos para telas menores */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas médias */
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas menores */
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+    }
+
+    .expanded {
+        max-width: 100%; /* Ajusta a imagem expandida para ocupar toda a largura em telas pequenas */
+        max-height: 80vh; /* Limita a altura máxima da imagem expandida */
+    }
 }

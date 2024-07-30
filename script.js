@@ -50,3 +50,21 @@ closeBtn.addEventListener('click', (event) => {
         expandedImage.classList.remove('expanded');
     }
 });
+
+//mobile
+
+function isMobileDevice() {
+    // Verifica a largura da janela
+    return window.innerWidth <= 768;
+}
+
+function redirectToMobilePage() {
+    const mobilePageLink = "https://guilimasantosn7.github.io/Portmobile/"
+    if (isMobileDevice() && mobilePageLink) {
+        window.location.href = mobilePageLink;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    redirectToMobilePage();
+});
