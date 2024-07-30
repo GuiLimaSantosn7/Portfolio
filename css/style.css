@@ -68,11 +68,15 @@ nav a {
             text-align: center;
             cursor: pointer;
             max-width: 100%; 
+            max-width: 100%; 
         }
         .col5 img {
          max-width: 100%; /* Garante que as imagens não excedam o contêiner */
          max-height: 100%; /* Garante que as imagens não excedam o contêiner */
          object-fit: contain;
+         max-width: 100%; /* Garante que as imagens não excedam o contêiner */
+    max-height: 100%; /* Garante que as imagens não excedam o contêiner */
+    object-fit: contain; /
             width: 100%;
             height: auto;
             transition: transform 0.5s ease;
